@@ -1,0 +1,38 @@
+---
+title: "Flights_ds241"
+author: Joseph White
+output: html_notebook
+---
+Load packages
+```{r}
+library(here)
+library(readr)
+library(magrittr)
+library(janitor)
+library(dplyr)
+library(ggplot2)
+```
+
+Load data
+## thisfile=here("data_raw","DL_SelectFields.zip")
+```{r}
+thisfile=here("DL_SelectFields.zip")
+
+df2019=read_csv(thisfile) %>% clean_names()
+```
+
+Create data set with graph
+```{r}
+df9=df2019 %>% filter(passengers>0,origin=="LGA")
+
+df9 %>% ggplot(aes(month)) + geom_bar(aes(weight=departures_performed))
+```
+Observations
+* They all seem relatively the same
+
+
+ Boxplot
+```{r}
+df9 %>% ggplot(aes(group=month,x=month, y=passengers)) + geom_boxplot()
+```
+
