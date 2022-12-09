@@ -5,6 +5,10 @@ date: "9/1/2021"
 output: html_notebook
 ---
 
+Adapted and edited by "Joseph White"
+
+
+
 Copied from https://raw.githubusercontent.com/rstudio-education/datascience-box/master/course-materials/application-exercises/ae-01b-covid/covid.Rmd
 
 
@@ -167,7 +171,7 @@ coronavirus %>%
 ```
 
 
-## New work
+## New work--- Joseph White's work below
 
 ```{r}
 df1=coronavirus %>% 

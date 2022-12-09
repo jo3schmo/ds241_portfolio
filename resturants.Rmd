@@ -110,7 +110,6 @@ lq_mc_dn_ny_join <- full_join(mc_lq_ny_mindist, dn_lq_ny_mindist, by = "address.
 ```{r}
 abc = c("closest.x","closest.y")
 
-ggplot(mc_lq_ny_join) +
-geom_boxplot(aes(x=address.y, abc))
+#ggplot(mc_lq_ny_join) + geom_boxplot(aes(x=address.y, abc))
 ```
 

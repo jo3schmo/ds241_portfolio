@@ -5,6 +5,10 @@ author: "Coach Skufca"
 output: html_notebook
 ---
 
+Adapted and edited by Joseph White
+
+
+
 This notebooks will help me talk through a bit of material regarding *spatial data*, 
 with some introduction to `spatial joins`.
 
@@ -70,7 +74,7 @@ I will use the GeoJSON file.  (Newer, not necessarily better, but ... a single f
 
 Data is easily readable 
 ```{r}
-neigh=st_read(here("analysis", "DC_Health_Planning_Neighborhoods_joey.geojson")) %>% clean_names()
+neigh=st_read(here("DC_Health_Planning_Neighborhoods_joey.geojson")) %>% clean_names()
 class(neigh)
 ```
 
@@ -106,7 +110,7 @@ https://opendata.dc.gov/datasets/DCGIS::dc-covid-19-total-positive-cases-by-neig
 Read cases information:
 
 ```{r message=FALSE, warning=FALSE}
-df_c=read_csv(here("analysis"," DC_COVID-19_Total_Positive_Cases_by_Neighborhood_joey.csv")) %>% clean_names() 
+df_c=read_csv(here("DC_COVID-19_Total_Positive_Cases_by_Neighborhood_joey.csv")) %>% clean_names() 
 
 df_cases=df_c %>%
   filter(as_date(date_reported) == "2022-02-22") %>% 
@@ -234,7 +238,10 @@ tm_shape(df2)+tm_polygons(c("adj_median_income","covid_rate","black_perc"))
 ```{r}
 df2 %>% filter(objectid!=30) %>% tm_shape()+tm_polygons(c("adj_median_income","covid_rate","black_perc"),alpha=.4)
 ```
-#find where people ride bikes (bikes started in each 'district')
+
+
+
+#find where people ride bikes (bikes started in each 'district') --- Joseph Whites work
 ```{r}
 bike_data <- read_csv("202209-capitalbikeshare-tripdata.csv") %>% clean_names()
 ```

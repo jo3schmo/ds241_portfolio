@@ -2,7 +2,7 @@ Homework 11/30/22
 
 ## Packages
 ```{r}
-devtools::install_github("jamgreen/lehdr")
+#devtools::install_github("jamgreen/lehdr")
 library(lehdr)
 library(dplyr)
 library(stringr)

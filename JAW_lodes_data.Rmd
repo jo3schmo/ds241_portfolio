@@ -5,6 +5,10 @@ author: "Coach Skufca"
 output: html_notebook
 ---
 
+dapted and edited by Joseph White
+
+
+
 This notebooks will try to use the `lehdr` package to get at detailed demographic data (where are interest is understanding how many people WORK in each census tract in the DC area.)
 
 Primary resource is https://cran.r-project.org/web/packages/lehdr/vignettes/getting_started.html
@@ -231,7 +235,7 @@ df_c %>% select(white_workers=CR01, black_workers=CR02,hispanic_workers=CT02) %>
 ```
 
 
-## my work
+## my work --- Joseph Whites starts below
 ```{r}
 df_me=df_c %>% select(pop=val_total_pop, men=CS01,women=CS02, dollar1250=CE01, dollar3333=CE02, dollar3334=CE03)
 ```

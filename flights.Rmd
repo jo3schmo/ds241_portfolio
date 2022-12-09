@@ -16,9 +16,9 @@ library(ggplot2)
 Load data
 ## thisfile=here("data_raw","DL_SelectFields.zip")
 ```{r}
-thisfile=here("DL_SelectFields.zip")
+thisfile=here("DL_SelectFields_2017.zip")
 
-df2019=read_csv(thisfile) %>% clean_names()
+df2017=read_csv(thisfile) %>% clean_names()
 ```
 
 Create data set with graph

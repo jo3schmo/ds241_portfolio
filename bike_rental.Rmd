@@ -121,9 +121,7 @@ glance(cnt_full)$adj.r.squared
 
 ## backward selection
 ```{r}
-rm_season <- linear_reg() %>%
-  set_engine("lm") %>%
-  fit(cnt ~ season, data = cnt_full)
-glance(cnt_full)$adj.r.squared
+#rm_season <- linear_reg() %>% set_engine("lm") %>% fit(cnt ~ season, data = cnt_full)
+#glance(cnt_full)$adj.r.squared
 ```
 
